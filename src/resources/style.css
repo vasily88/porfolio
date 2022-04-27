@@ -1,7 +1,9 @@
 *{
+    direction: rtl;
     margin: 0;
     padding: 0;
     box-sizing: content-box;
+    font-size: 18px;
 }
 body{
     font-family: 'Assistant', sans-serif; 
