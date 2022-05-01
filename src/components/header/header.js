@@ -13,7 +13,7 @@ const Header = () => {
                 position='fixed'
                 >
                 <Toolbar>
-                    <IconButton>
+                    <IconButton area-label="menu">
                         <MenuIcon />
                     </IconButton>
                     <div className='mainLogo'>

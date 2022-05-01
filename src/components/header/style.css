@@ -4,9 +4,13 @@
     background-color: #474747;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     font-weight: 600;
+    padding: 0 0 0 3vw;
 }
-.header header > button{
+.header .MuiIconButton-root{
     color: #fff;
+}
+.header .MuiIconButton-root {
+    padding: 3vw;
 }
