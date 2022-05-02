@@ -1,23 +1,25 @@
-import React,{useState} from 'react';
+import React from 'react';
 import './drawer.css';
 
-import { Drawer, IconButton } from '@material-ui/core';
-
-import BurgerIcon from '@material-ui/icons/Menu';
+import { Drawer, List,ListItem } from '@material-ui/core';
 
 
-const Menu = () => {
+const SideDrawer = (props) => {
+    console.log(props);
     return(
-        <div className='drawer'>
-            <IconButton>
-                <BurgerIcon />
-            </IconButton>
-            <Drawer>
-
-            </Drawer>
-        </div>
+        <Drawer
+            anchor={'right'}
+            open={props.open}
+            onClose = {() => props.onClose(false)}
+        >
+            <List component="nav">
+                <ListItem button onClick={()=>alert('click')}>
+                    Home
+                </ListItem>
+            </List>
+        </Drawer>
     );
 
 }
 
-export default Menu;
+export default SideDrawer;
