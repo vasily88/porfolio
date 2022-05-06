@@ -1,7 +1,8 @@
 import React from 'react';
 import './drawer.css';
 
-import { Drawer, List,ListItem } from '@material-ui/core';
+import CloseIcon from '@material-ui/icons/Close';
+import { Drawer, List,ListItem, Divider, IconButton } from '@material-ui/core';
 
 const ItemDrawer = [
     {'where':'Home','moveTo':'Home'},
@@ -25,8 +26,17 @@ const SideDrawer = (props) => {
             open={props.open}
             onClose = {() => props.onClose(false)}
         >
+            <div className='drawerHeader'>
+                
+                <IconButton onClick={() => props.onClose(false)}>
+                    <CloseIcon />
+                </IconButton>
+            </div>
+
+            <Divider />
+
             <List component="nav">
-                {ItemDrawer.map((item) => showList(item))};
+                {ItemDrawer.map((item) => showList(item))}
             </List>
         </Drawer>
     );
