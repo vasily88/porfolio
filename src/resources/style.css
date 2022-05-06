@@ -11,5 +11,5 @@ body{
 .main{
     height: 100vw;
     width: 100%;
-    background: linear-gradient(red,yellow);
+    background: linear-gradient(rgb(52, 40, 40),yellow);
 }
