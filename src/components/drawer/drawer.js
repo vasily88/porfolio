@@ -3,9 +3,22 @@ import './drawer.css';
 
 import { Drawer, List,ListItem } from '@material-ui/core';
 
+const ItemDrawer = [
+    {'where':'Home','moveTo':'Home'},
+    {'where':'About','moveTo':'About'},
+    {'where':'Portfolio','moveTo':'portfolio'},
+    {'where':'Contact','moveTo':'Contact'}
+]
+
+const showList = (item) => {
+    return(
+        <ListItem button onClick={()=>alert(item.moveTo)} key={item.moveTo}>
+            {item.where}
+        </ListItem>
+        );  
+}
 
 const SideDrawer = (props) => {
-    console.log(props);
     return(
         <Drawer
             anchor={'right'}
@@ -13,9 +26,7 @@ const SideDrawer = (props) => {
             onClose = {() => props.onClose(false)}
         >
             <List component="nav">
-                <ListItem button onClick={()=>alert('click')}>
-                    Home
-                </ListItem>
+                {ItemDrawer.map((item) => showList(item))};
             </List>
         </Drawer>
     );

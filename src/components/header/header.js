@@ -27,7 +27,11 @@ const Header = () => {
                         <MenuIcon />
                     </IconButton>
                     <div className='mainLogo'>
-                        Logo
+                        Vasily
+                        <br />
+                        <span>
+                        Loban
+                        </span>
                     </div>
 
                     <SideDrawer 

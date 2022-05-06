@@ -2,3 +2,9 @@
 .drawer button svg{
 color: #fff;
 }
+
+.MuiListItem-gutters {
+    padding: 2vw 6vw;
+    align-items: center;
+    justify-content: center;
+}

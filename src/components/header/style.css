@@ -1,7 +1,7 @@
 .header header > div{
     width: 100%;
     color: #fff;
-    background-color: #474747;
+    background-color: #000;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -13,4 +13,13 @@
 }
 .header .MuiIconButton-root {
     padding: 3vw;
+}
+.mainLogo{
+    font-size: 3vw;
+    text-align: center;
+    line-height: 0.85;
+    text-shadow: 0 0 4px #fff;
+}
+.mainLogo span{
+    font-size: 2vw;
 }
