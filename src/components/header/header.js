@@ -15,7 +15,6 @@ const Header = () => {
     }
 
     const toggleScroll = () => {
-        console.log();
         if (window.scrollY > 0){
             setHeaderFixedColor(true);
         }else{
