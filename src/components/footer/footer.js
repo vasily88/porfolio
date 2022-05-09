@@ -8,7 +8,7 @@ const Footer = () => {
     return(
             <div className='footer'>
 
-                <Fade>
+                <Fade triggerOnce>
                     <div className='rightFooter'>
                         <h3>
                             Contact
@@ -22,7 +22,7 @@ const Footer = () => {
                     </div>
                 </Fade>
 
-                <Fade>
+                <Fade triggerOnce>
                     <div className='leftFooter'>
                         <p>
                             Vasily
