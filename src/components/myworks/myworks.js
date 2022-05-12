@@ -1,6 +1,7 @@
 import React from "react";
 import Slider from "react-slick/lib/slider";
 
+import imageSlider1 from '../../resources/images/1.jpg';
 import './style.css';
 
 const MyWork = () => {
@@ -8,12 +9,11 @@ const MyWork = () => {
     const settings = {
         isFinite: true,
         speed: 500,
-        slideeToShow: 1,
+        slidesToShow: 1,
         slidesToScroll: 1,
         centerMode: true,
         centerPadding: '2vw',
         arrows: false,
-        rtl:true
     }
 
     return(
@@ -22,9 +22,7 @@ const MyWork = () => {
 
                 <Slider {...settings}>
                     <div className="sliderItem">
-                        <p>
-                            1
-                        </p>
+                        <imageSlider1 />
                     </div>
                     <div className="sliderItem">
                         <p>

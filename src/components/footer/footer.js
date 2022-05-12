@@ -22,18 +22,6 @@ const Footer = () => {
                     </div>
                 </Fade>
 
-                <Fade triggerOnce>
-                    <div className='leftFooter'>
-                        <p>
-                            Vasily
-                            <br/>
-                            <span>
-                            Loban
-                            </span>
-                        </p>
-                    </div>
-                </Fade>
-
             </div>
     );
 }

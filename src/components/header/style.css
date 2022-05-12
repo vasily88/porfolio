@@ -4,6 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-direction: row-reverse;
     font-weight: 600;
     padding: 0 0 0 3vw;
 }
@@ -19,9 +20,23 @@
 .mainLogo{
     font-size: 3vw;
     text-align: center;
-    line-height: 0.85;
-    /* text-shadow: 0 0 4px #fff; */
+    line-height: 0.65;
 }
 .mainLogo span{
+    font-size: 1.5vw;
+}
+.drawerHeader{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+body .MuiListItem-button{
     font-size: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body .MuiSvgIcon-root {
+    width: 2.5vw;
+    height: 2.5vw;
 }
