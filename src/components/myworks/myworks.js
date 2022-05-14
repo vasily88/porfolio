@@ -8,6 +8,22 @@ import './style.css';
 
 const MyWork = () => {
 
+    const sliderArray = [
+        {'src':imageSlider1,'key':'1','alt':'picture1'},
+        {'src':imageSlider2,'key':'2','alt':'picture1'},
+        {'src':imageSlider3,'key':'3','alt':'picture1'},
+    ]
+
+    const mapItemSlider = (item) => {
+        return(
+            <div className="sliderItem" key={item.key} >
+                <div className="wrapperMyWorkSliderItem">
+                    <img src={item.src} alt={item.alt} />   
+                </div>
+            </div>
+        );
+    }
+
     const settings = {
         speed: 500,
         slidesToShow: 1.665,
@@ -20,17 +36,12 @@ const MyWork = () => {
         <div className="myWork">
             <div className="wrapperMyWork">
 
-                <Slider {...settings}>
-                    <div className="sliderItem">
-                        <img src={imageSlider1} alt="picture1" />
-                    </div>
-                    <div className="sliderItem">
-                        <img src={imageSlider2} alt="picture2" />
-                    </div>
-                    <div className="sliderItem">
-                        <img src={imageSlider3} alt="picture3" />
-                    </div>
+                <h3>
+                    My Work
+                </h3>
 
+                <Slider {...settings}>
+                    {sliderArray.map((item) => mapItemSlider(item))}
                 </Slider>
 
             </div>

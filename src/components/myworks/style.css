@@ -27,3 +27,17 @@
     border-radius: 1.7vw;
     overflow: hidden;
 }
+.wrapperMyWork h3{
+    color: #fff;
+    text-align: center;
+    font-size: 4vw;
+    padding: 2vw 0;
+}
+.wrapperMyWork {
+    padding: 8vw 0;
+}
+.wrapperMyWorkSliderItem{
+    cursor: pointer;
+    border-radius: 1.7vw;
+    overflow: hidden;
+}
