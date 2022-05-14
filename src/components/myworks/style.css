@@ -10,12 +10,20 @@
 .sliderItem{
     width: 30vw;
     height: 30vw;
-    background-color: #fff;
+    background-color: #000;
     color: #000;
+    padding: 0 5vw;
 }
 .slick-track{
     display: flex;
 }
 .slick-list{
+    overflow: hidden;
+}
+.sliderItem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1.7vw;
     overflow: hidden;
 }

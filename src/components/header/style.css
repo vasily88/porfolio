@@ -7,23 +7,24 @@
     flex-direction: row-reverse;
     font-weight: 600;
     padding: 0 0 0 3vw;
+    box-shadow: 0 0 2vw #ffffff5c;
 }
 .header .MuiIconButton-root{
     color: #fff;
 }
 .header .MuiIconButton-root {
-    padding: 3vw;
+    padding: 1.5vw 3vw;
 }
 .header .MuiPaper-elevation4{
     box-shadow: none;
 }
 .mainLogo{
-    font-size: 3vw;
+    font-size: 2vw;
     text-align: center;
     line-height: 0.65;
 }
 .mainLogo span{
-    font-size: 1.5vw;
+    font-size: 1vw;
 }
 .drawerHeader{
     display: flex;

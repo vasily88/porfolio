@@ -2,18 +2,18 @@ import React from "react";
 import Slider from "react-slick/lib/slider";
 
 import imageSlider1 from '../../resources/images/1.jpg';
+import imageSlider2 from '../../resources/images/2.jpg';
+import imageSlider3 from '../../resources/images/3.jpg';
 import './style.css';
 
 const MyWork = () => {
 
     const settings = {
-        isFinite: true,
         speed: 500,
-        slidesToShow: 1,
+        slidesToShow: 1.665,
         slidesToScroll: 1,
         centerMode: true,
-        centerPadding: '2vw',
-        arrows: false,
+        arrows: true,
     }
 
     return(
@@ -22,28 +22,15 @@ const MyWork = () => {
 
                 <Slider {...settings}>
                     <div className="sliderItem">
-                        <imageSlider1 />
+                        <img src={imageSlider1} alt="picture1" />
                     </div>
                     <div className="sliderItem">
-                        <p>
-                            2
-                        </p>
+                        <img src={imageSlider2} alt="picture2" />
                     </div>
                     <div className="sliderItem">
-                        <p>
-                            3
-                        </p>
+                        <img src={imageSlider3} alt="picture3" />
                     </div>
-                    <div className="sliderItem">
-                        <p>
-                            4
-                        </p>
-                    </div>
-                    <div className="sliderItem">
-                        <p>
-                            5
-                        </p>
-                    </div>
+
                 </Slider>
 
             </div>
