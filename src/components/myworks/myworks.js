@@ -1,6 +1,6 @@
 import React,{useEffect} from "react";
 import Slider from "react-slick/lib/slider";
-import lottie from "lottie-web";
+import Lottie from "react-lottie";
 
 import arrowLottie from '../../resources/images/arrow.json';
 
@@ -10,8 +10,6 @@ import imageSlider3 from '../../resources/images/3.jpg';
 import './style.css';
 
 const MyWork = () => {
-
-
 
     const sliderArray = [
         {'src':imageSlider1,'key':'1','alt':'picture1'},
@@ -35,25 +33,36 @@ const MyWork = () => {
         slidesToScroll: 1,
         centerMode: true,
         arrows: true,
-    }
+  }
+    
+  useEffect(() => {
 
 
-    useEffect(() => {
-        lottie.loadAnimation({
-            container: document.querySelector('.arrow-right'),
-            animatioData: arrowLottie,
-            renderer: "svg",
-            loop: true,
-            autoplay: true,
-        });
+  const defaultOptions = {
+      loop: true,
+      autoplay: true,
+      animationData: arrowLottie,
+      rendererSettings: {
+          preserveAspectRatio: "xMidYMid slice",
+      },
+  }
+  
+    let slickNext1 = document.querySelector('.slick-next');
+    let slickPrev1 = document.querySelector('.slick-prev');
+
+    // slickNext1.text('');
+    
+        return(
+            <Lottie 
+                 options={defaultOptions}
+            />
+        );
+
     },[]);
 
-    
     return(
         <div className="myWork">
             <div className="wrapperMyWork">
-
-                <div className="arrow-right"></div>
 
                 <h3>
                     My Work
@@ -68,4 +77,4 @@ const MyWork = () => {
     );
 }
 
-export default MyWork;
+export default MyWork; 

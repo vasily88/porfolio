@@ -41,3 +41,21 @@
     border-radius: 1.7vw;
     overflow: hidden;
 }
+.arrow-right{
+    width: 5vw;
+}
+.slick-slider{
+    position: relative;
+    margin-top: 4vw;
+}
+.slick-arrow {
+position: absolute;
+top: -5vw;
+}
+
+.slick-prev{
+left: 0;
+}
+.slick-next{
+right: 0;
+}
