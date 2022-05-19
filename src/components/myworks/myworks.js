@@ -77,7 +77,6 @@ class MyWork extends Component {
                         <button className="arrow-prev" onClick={this.previous}>
                             <Lottie 
                                 options={defaultOptions}
-                                isClickToPauseDisabled={false}
                             />
                         </button>
 
