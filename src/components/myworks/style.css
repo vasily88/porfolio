@@ -41,12 +41,24 @@
     border-radius: 1.7vw;
     overflow: hidden;
 }
-.arrow-right{
+.navSlider{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.arrow-next,
+.arrow-prev{
     width: 5vw;
+    height: 2.6vw;
+    background: none;
+    cursor: pointer;
+}
+.arrow-next{
+    transform: rotate(180deg);
 }
 .slick-slider{
     position: relative;
-    margin-top: 4vw;
+    margin-top: 2vw;
 }
 .slick-arrow {
 position: absolute;
