@@ -1,4 +1,5 @@
 import React ,{Component} from "react";
+import timeCounter from '../timeCounter/timeCounter';
 import Slider from "react-slick/lib/slider";
 import Lottie from "react-lottie";
 
@@ -24,6 +25,12 @@ class MyWork extends Component {
 
     render() {
 
+        const sliderArray = [
+            {'src':imageSlider1,'key':'1','alt':'picture1'},
+            {'src':imageSlider2,'key':'2','alt':'picture1'},
+            {'src':imageSlider3,'key':'3','alt':'picture1'},
+        ]
+
         const mapItemSlider = (item) => {
             return(
                 <div className="sliderItem" key={item.key} >
@@ -33,12 +40,6 @@ class MyWork extends Component {
                 </div>
             );
         }
-
-        const sliderArray = [
-            {'src':imageSlider1,'key':'1','alt':'picture1'},
-            {'src':imageSlider2,'key':'2','alt':'picture1'},
-            {'src':imageSlider3,'key':'3','alt':'picture1'},
-        ]
 
         const settings = {
             speed: 500,
@@ -85,6 +86,8 @@ class MyWork extends Component {
                     <Slider ref={c=>(this.slider = c)} {...settings}>
                         {sliderArray.map((item) => mapItemSlider(item))}
                     </Slider>
+
+                    <timeCounter />
 
                 </div>
             </div>
