@@ -1,5 +1,5 @@
 import React ,{Component} from "react";
-import timeCounter from '../timeCounter/timeCounter';
+import TimeCounter from '../timeCounter/timeCounter';
 import Slider from "react-slick/lib/slider";
 import Lottie from "react-lottie";
 
@@ -87,7 +87,7 @@ class MyWork extends Component {
                         {sliderArray.map((item) => mapItemSlider(item))}
                     </Slider>
 
-                    <timeCounter />
+                    <TimeCounter />
 
                 </div>
             </div>

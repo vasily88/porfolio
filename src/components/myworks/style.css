@@ -35,6 +35,7 @@
 }
 .wrapperMyWork {
     padding: 8vw 0;
+    position: relative;
 }
 .wrapperMyWorkSliderItem{
     cursor: pointer;
