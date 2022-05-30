@@ -1,8 +1,8 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 
 import './timeCounter.css';
 
-const timeCounter = () => {
+const TimeCounter = () => {
 
     const counetItem = [
         {'name':'days','num':'2','txt':'Days'},
@@ -20,6 +20,19 @@ const timeCounter = () => {
         );
     }
 
+    const getTimeUntil = (deadLine) => {
+        const time = Date.parse(deadLine) - Date.parse(new Date());
+        if (time < 0){
+            console.log('Date Passed')
+        }else{
+            console.log('Still Count')
+        }
+    }
+
+    useEffect(() => {
+        setInterval(() => getTimeUntil('Dec, 20, 2023, 01:20:00'),1000)
+    },[getTimeUntil]);
+
 
     return(
         <div className='timeCounter'>
@@ -30,5 +43,5 @@ const timeCounter = () => {
     );
 }
 
-export default timeCounter;
+export default TimeCounter;
 
