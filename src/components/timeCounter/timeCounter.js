@@ -1,45 +1,63 @@
-import React,{useEffect} from 'react';
+import React,{useEffect,useState,useCallback} from 'react';
+import {Fade} from 'react-awesome-reveal';
 
 import './timeCounter.css';
 
 const TimeCounter = () => {
 
-    const counetItem = [
-        {'name':'days','num':'2','txt':'Days'},
-        {'name':'hours','num':'22','txt':'Hours'},
-        {'name':'minutes','num':'12','txt':'Minutes'},
-        {'name':'seconds','num':'10','txt':'Seconds'}
-    ];
+    const [time,setTime] = useState({
+        days: '0',
+        hours: '0',
+        minutes: '0',
+        seconds: '0'
+    });
 
-    const mapCounter = (item) => {
+    const mapCounter = (item,value) => {
         return(
-            <div className='counterItem' data-counter={item.name} key={item.name}>
-                <div className='num'>{item.num}</div>
-                <div className='txt'>{item.txt}</div>
+            <div className='counterItem' data-counter={value} key={value}>
+                <div className='num'>{item}</div>
+                <div className='txt'>{value}</div>
             </div>
         );
     }
 
-    const getTimeUntil = (deadLine) => {
+    const getTimeUntil = useCallback((deadLine) => {
         const time = Date.parse(deadLine) - Date.parse(new Date());
         if (time < 0){
             console.log('Date Passed')
         }else{
-            console.log('Still Count')
+            const seconds = Math.floor((time/1000)%60);
+            const minutes = Math.floor((time/1000/60)%60);
+            const hours = Math.floor((time/(1000*60*60))%24);
+            const days = Math.floor((time/(1000*60*60*24)));
+
+            setTime({
+                days,
+                hours,
+                minutes,
+                seconds
+            });
         }
-    }
+    },[])
+    
+
 
     useEffect(() => {
-        setInterval(() => getTimeUntil('Dec, 20, 2023, 01:20:00'),1000)
+        setInterval(() => getTimeUntil('Dec, 20, 2022, 01:00:00'),1000)
     },[getTimeUntil]);
 
 
     return(
+        <Fade triggerOnce delay={1000}>
         <div className='timeCounter'>
             <div className='wrapperConter'>
-                {counetItem.map((item)=>mapCounter(item))}
+                {mapCounter(time.days,'Days')}
+                {mapCounter(time.hours,'Hours')}
+                {mapCounter(time.minutes,'Minutes')}
+                {mapCounter(time.seconds,'Seconds')}
             </div>
         </div>
+        </Fade>
     );
 }
 
