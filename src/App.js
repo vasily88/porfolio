@@ -3,6 +3,7 @@ import './resources/style.css';
 
 import Header from './components/header/header';
 import MyWork from './components/myworks/myworks';
+import Highlight from './components/highlights';
 import Footer from './components/footer/footer';
 
 const App = () => {
@@ -12,6 +13,7 @@ const App = () => {
             <Header />
             <div className='main'>
                 <MyWork />
+                <Highlight />
             </div>
             <Footer />
 
