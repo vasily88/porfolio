@@ -19,3 +19,34 @@
     background-color: #0000003b;
     filter: drop-shadow(2px 4px 6px black);
 }
+
+.wrapperDiscount{
+    padding: 0 5vw 8vw;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+}
+.discountLeft{
+    flex: 1;
+    text-align: center;
+}
+.discountLeft p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 1;
+}
+.discountLeft p span{
+    font-size: 6vw;
+    font-weight: 600;
+}
+.discountRight{
+    flex: 2;
+    text-align: center;
+    font-size: 2vw;
+}
+.discountRight p{
+    font-size: 2vw;
+}
