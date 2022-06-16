@@ -1,8 +1,28 @@
-import React from 'react';
-
+import React,{useState} from 'react';
 import {Fade, Slide} from 'react-awesome-reveal';
+import Button from '../utils/button';
+
 
 const Discount = () => {
+
+    const [countPercentage,setCountPercentage] = useState({
+        'percentage': 0
+    });
+    
+    const percentage = (precetage) => {
+        var x = 0;
+        var intervalID = setInterval(function () {
+        
+           setCountPercentage({
+               'percentage': x
+           });
+        
+           if (++x === precetage+1) {
+               window.clearInterval(intervalID);
+           }
+        }, 50);
+    }
+
     return(
         <div className='wrapperDiscount'>
 
@@ -13,6 +33,7 @@ const Discount = () => {
                     my name is description amd this is my web site, no imfre cdommg dofjg.
                     kjfu ldlll siiii, dfifkdl kdjj
                 </p>
+                <Button />
             </Slide>
 
             <Fade 
@@ -20,12 +41,12 @@ const Discount = () => {
                 className='discountLeft'
                 onVisibilityChange={(inView) => {
                     if (inView){
-                        console.log(inView);
+                        percentage(30);
                     }
                 }}
                 >
                 <p>
-                    <span>30%</span>
+                    <span>{countPercentage.percentage}%</span>
                     <span>OFF</span>
                 </p>
             </Fade>
