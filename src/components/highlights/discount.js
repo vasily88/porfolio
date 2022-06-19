@@ -27,13 +27,22 @@ const Discount = () => {
         <div className='wrapperDiscount'>
 
             <Slide right className='discountRight'>
-                <p>
-                    my name is description amd this is my web site, no imfre cdommg dofjg.
-                    kjfu ldlll siiii, dfifkdl kdjjfk ieeiei oowols dlfdklkflle slfkslfklf.
-                    my name is description amd this is my web site, no imfre cdommg dofjg.
-                    kjfu ldlll siiii, dfifkdl kdjj
-                </p>
-                <Button />
+                <div className='wrapperRightParagraphButton'>
+                    <p>
+                        my name is description amd this is my web site, no imfre cdommg dofjg.
+                        kjfu ldlll siiii, dfifkdl kdjjfk ieeiei oowols dlfdklkflle slfkslfklf.
+                        my name is description amd this is my web site, no imfre cdommg dofjg.
+                        kjfu ldlll siiii, dfifkdl kdjj
+                    </p>
+                    <Button 
+                        url='https://www.google.com/'
+                        buttonTxt='Click Me!!!'
+                        background="#000"
+                        color="#fff"
+                        width="26vw"
+                        height="5vw"
+                    />
+                </div>
             </Slide>
 
             <Fade 

@@ -4,6 +4,9 @@
     box-sizing: border-box;
     font-size: 18px;
 }
+a{
+    text-decoration: none;
+}
 body{
     font-family: 'Assistant', sans-serif; 
 }
