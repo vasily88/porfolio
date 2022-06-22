@@ -1,4 +1,5 @@
 import React from 'react';
+import { Element } from 'react-scroll';
 import './resources/style.css';
 
 import Header from './components/header/header';
@@ -15,7 +16,9 @@ const App = () => {
                 <MyWork />
                 <Highlight />
             </div>
-            <Footer />
+            <Element name="Footer">
+                <Footer />
+            </Element>
 
         </div>
     );
